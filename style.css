@@ -7,10 +7,10 @@
     font-family: "Poppins", sans-serif;
     
 }
-
+/* 
  html {
     scroll-behavior: smooth;
-  } 
+  }  */
 
 
 
@@ -261,6 +261,7 @@
         }
         & > p{
             color: #14bf98;
+            font-size: 15px;
         }
        
     } 
@@ -359,3 +360,100 @@
         color:#14bf98 ;
     }
 
+.service-first-part{
+   height: 66vh;
+   display: flex;
+
+   & > img{
+    height: 66vh;
+    width: 50%;
+    
+   }
+}
+
+.first-part-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 35%;
+    gap: 20px;
+
+    & > h1{
+        color: #484a46;
+        font-size: 28px;
+        line-height: 33px;
+    }
+    & > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & > li{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            list-style: none;
+            color:#484a46;
+            font-size: 20px;
+            font-weight: 500;
+            & > span{
+                color:#484a46;
+            }
+        }
+        & > li:hover{
+            color: #14bf98;
+            cursor: pointer;
+        }
+
+         & > li:first-child{
+            color: #14bf98;
+         }
+        
+    }
+}
+
+#first-point{
+    color: white;
+    background-color: #14bf98;
+    border: 3px solid #14bf98;
+    padding: 2px 14px;
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.number{
+    border: 3px solid #484a46;
+    padding: 2px 13px;
+    border-radius: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.number:hover{
+            color: #14bf98;
+            cursor: pointer;
+            border: 3px solid #14bf98;
+        }
+
+#ff{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    & > li{
+        list-style: none;
+        font-size: 20px;
+        color: #484a46;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+    }
+
+    & > p{
+        width: 80%;
+        margin-left: 45px;
+        color: #484a46be;
+    }
+}
