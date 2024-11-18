@@ -834,7 +834,7 @@
                 color: #dfe5ece3;
             }
 
-            ul {
+            & >ul {
                 font-size: 16px;
                 display: flex;
                 flex-direction: column;
@@ -1229,9 +1229,9 @@ button:hover {
 .about-details p {
     font-size: 16px;
     color: #484a46;
-}
 
-ul {
+
+& >  ul {
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -1239,12 +1239,12 @@ ul {
     color: #484a46;
 }
 
-ul > li {
+& > ul > li {
     list-style: none;
     color: #484a46;
 }
 
-ul > li::before {
+& >  ul > li::before {
     content: '';
     display: inline-block;
     width: 7px;
@@ -1253,7 +1253,7 @@ ul > li::before {
     margin-right: 10px; /* Adjusted margin-right for desired gap */
     margin-bottom: 3px;
 }
-
+}
 .review-main {
     display: flex;
     gap: 20px;
@@ -1463,5 +1463,3 @@ button {
 button:hover {
     background-color: #12a57a;
 }
-
-
