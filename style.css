@@ -1101,6 +1101,41 @@ button:hover {
     border-radius: 10px;
     transition: transform 0.3s ease;
     width: 270px;
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 25px;
+        background-color: #14bf98;
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+    }
+    
+    
+    .icon i {
+        color: white;
+        font-size: 16px;
+    }
+    
+    .icon:hover {
+        background-color: white;
+    }
+    
+    & >.icon:hover i {
+        color: #14bf98;
+    }
+    
 }
 
 /* .consultant-card:hover {
@@ -1141,39 +1176,6 @@ button:hover {
 }
 
 /* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 25px;
-    background-color: #14bf98;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-}
-
-
-.icon i {
-    color: white;
-    font-size: 16px;
-}
-
-.icon:hover {
-    background-color: white;
-}
-
-.icon:hover i {
-    color: #14bf98;
-}
 
 /* //about  */
 
