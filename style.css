@@ -7,10 +7,10 @@
     font-family: "Poppins", sans-serif;
     
 }
-/* 
+
  html {
     scroll-behavior: smooth;
-  }  */
+  } 
 
 
 
@@ -39,21 +39,37 @@
         width: 50px;
         display: flex;
         justify-content: center;
+        position: relative;
+        left: 100px;
+        margin-bottom: 22px;
+        
     }
 }
 
 .listbar {
-    & > ul {
+    ul {
         display: flex;
         justify-content: center;
         list-style: none;
         color: white;
         gap: 20px;
-       
-    & > li {
-        font-weight: 500;
+
+        & > li:first-child > a{
+            color: #14bf98;
+        }
     }
-}
+    
+    ul >  li a{
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+    }
+    
+    ul > li a:hover {
+        color: #14bf98;
+    }
+    
     .social-icons {
         display: flex;
         justify-content: center;
@@ -61,7 +77,6 @@
         margin-top: 15px;
         position: relative;
         bottom: 16px;
-        
     }
     
     .icon {
@@ -74,9 +89,16 @@
         clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
         cursor: pointer;
         transition: all 0.3s ease;
-        
     }
     
+    .icon a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
     
     .icon i {
         color: white;
@@ -89,9 +111,8 @@
     
     .icon:hover i {
         color: #14bf98;
+        background-color: white;
     }
-    
-    
 }
                     /* //hero-container */
 
@@ -174,6 +195,26 @@
 #scroll:hover{
     color: #14bf98;
 }
+
+.scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #14bf98;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 
 /* //introduction */
 
@@ -520,7 +561,7 @@
   
 }
 }
-/* //grid-first-part */
+/* //grid-second-part */
 
 .service-second-part{
     height: 66vh;
@@ -629,33 +670,44 @@
     }
   }
 
-  .label2{
-    & > p{
-     color: #484a46;
-     font-weight: 600;
-     font-size: 15px;
-     } 
-     & > .bar2{
-        height: 20px;
-        background-color: #14bf98;
-        border-radius: 3px;
-        width: 76%;
-    }
-   }
+  /* Label styling */
+.label2, .label3 {
+    margin-bottom: 20px;
+}
 
-   .label3{
-    & > p{
-     color: #484a46;
-     font-weight: 600;
-     font-size: 15px;
-     } 
-     & > .bar3{
-        height: 20px;
-        background-color: #14bf98;
-        border-radius: 3px;
-        width: 90%;
-    }
-   }
+.label2 > p, .label3 > p {
+    color: #484a46;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Full container for the bars */
+.full {
+    height: 20px;
+    background-color: #55555520; /* Semi-transparent grey background */
+    border-radius: 3px;
+    width: 100%;
+    position: relative; /* So that the bar can be positioned inside */
+}
+
+/* Progress bar (on top of the background) */
+.bar2, .bar3 {
+    position: absolute; /* Position the bar inside the .full container */
+    height: 100%; /* Make sure it fills the height of the container */
+    background-color: #14bf98; /* Green progress color */
+    border-radius: 3px;
+}
+
+/* Width of the bars */
+.bar2 {
+    width: 76%; /* Fill 76% of the bar */
+}
+
+.bar3 {
+    width: 90%; /* Fill 90% of the bar */
+}
+
+   
 
    /* // customer-review */
 
@@ -764,7 +816,7 @@
 }
 
 .card .card-details > i {
-    color: #484a46;
+    color: #484a46a7;
     font-size: 15px;
 }
 
@@ -1119,6 +1171,14 @@ button:hover {
         
     }
     
+    .icon a {
+        display: flex; /* Ensures proper alignment of the icon inside the anchor tag */
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Matches the size of the .icon div */
+        height: 100%;
+        text-decoration: none;
+    }
     
     .icon i {
         color: white;
@@ -1129,10 +1189,10 @@ button:hover {
         background-color: white;
     }
     
-    & >.icon:hover i {
+    .icon:hover i {
         color: #14bf98;
+        background-color: white;
     }
-    
 }
 
 /* .consultant-card:hover {
@@ -1225,34 +1285,41 @@ button:hover {
 }
 }
 
+.about-details {
+    color: #484a46;
+}
+
 .about-details p {
     font-size: 16px;
     color: #484a46;
+}
 
-
-& >  ul {
+.about-details ul {
     font-size: 16px;
     display: flex;
     flex-direction: column;
     gap: 5px;
     color: #484a46;
+    list-style: none; /* Ensures no default list styles are applied */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
 }
 
-& > ul > li {
-    list-style: none;
+.about-details ul li {
+    display: flex; /* Aligns the bullet and text horizontally */
+    align-items: center; /* Vertically centers the bullet with text */
     color: #484a46;
 }
 
-& >  ul > li::before {
+.about-details ul li::before {
     content: '';
     display: inline-block;
     width: 7px;
     height: 7px;
-    background-color: #14bf98;
-    margin-right: 10px; /* Adjusted margin-right for desired gap */
-    margin-bottom: 3px;
+    background-color: #14bf98; /* Custom bullet color */
+    margin-right: 10px; /* Adds space between bullet and text */
 }
-}
+
 .review-main {
     display: flex;
     gap: 20px;
@@ -1331,23 +1398,51 @@ button:hover {
 }
 }
 
-
 .info-item {
     display: flex;
+    gap: 15px; /* Space between each link */
+    margin-top: 20px;
     align-items: center;
-    gap: 10px;
+    & > i{
+        color: #14bf98;
+        }
+        & > span{
+            color: #484a46;
+    }
+}
+.info-item1 {
+    display: flex;
+    gap: 15px; /* Space between each link */
     margin-top: 20px;
 }
 
-.info-item i {
-    font-size: 20px;
-    color: #14bf98;
+.info-link {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    text-decoration: none; /* Removes underline */
+    color: #484a46; /* Default text color */
+    transition: color 0.3s ease;
 }
 
-.info-item span {
-    font-size: 16px;
-    color: #484a46;
+.info-link i {
+    font-size: 20px;
+    color: #14bf98; /* Default icon color */
+    transition: color 0.3s ease;
 }
+
+.info-link:hover i {
+    color: #12a57a; /* Icon color on hover */
+}
+
+.info-link:hover span {
+    color: #12a57a; /* Text color on hover */
+}
+
+.info-link span {
+    font-size: 16px;
+}
+
 
 .contact-information{
     display: flex;
@@ -1355,46 +1450,49 @@ button:hover {
     flex-direction: column;
     
 }
-
-.media-links-details{
-    & > h2{
-        color: #484a46;
-        font-size: 20px;
-        margin-top: 20px;
-    }
+.media-links-details h2 {
+    color: #484a46;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: left; /* Aligns the heading to the left */
 }
+
 .social-icons {
     display: flex;
-    gap: 10px;
-    justify-content: left;
+    gap: 15px; /* Adds space between the icons */
+    justify-content: left; /* Align icons to the left */
     margin-top: 20px;
+}
+
+.social-link {
+    display: inline-flex; /* Ensures the icon is properly aligned inside the link */
+    justify-content: center;
+    align-items: center;
+    height: 60px; /* Matches the height of the icon container */
+    width: 60px; /* Matches the width of the icon container */
+    text-decoration: none; /* Removes underline from the link */
 }
 
 .social-icons i {
     background-color: #14bf98;
-    padding: 10px; /* Increase padding for a larger icon */
-    height: 50px; /* Increased height */
-    width: 60px; /* Increased width */
+    height: 50px; /* Icon container height */
+    width: 70px; /* Icon container width */
+    padding: 10px; /* Adjust padding for better spacing */
     color: white;
     cursor: pointer;
-    border-radius: 8px; /* Optional: Adds slight roundness to the hexagon */
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* Hexagon shape */
     display: flex;
-    justify-content: center; /* Centers the icon inside the container */
-    align-items: center; /* Centers the icon inside the container */
-    font-size: 30px; /* Increases the icon size */
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Icon size */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.social-icons i:hover {
+.social-link:hover i {
     background-color: white;
     color: #14bf98;
 }
 
-/* Polygon for social media icons */
-.social-icons i {
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
 .contact-form-container {
     max-width: 600px;
     margin: 70px auto;
@@ -1487,7 +1585,7 @@ button:hover {
 .footer-column {
     flex: 1; /* Ensures columns are of equal width */
     text-align: left; /* Align text to the left */
-    margin: 0 10px;
+    margin-top: 20px ;
 }
 
 .footer-column h3 {
