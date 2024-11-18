@@ -1059,6 +1059,7 @@ button:hover {
     display: flex;
     justify-content: center;
     padding: 50px 20px;
+    background-color: #7879760e;
 }
 
 .consultant-container {
@@ -1096,7 +1097,7 @@ button:hover {
 .consultant-card {
     text-align: center;
     padding: 20px;
-    background: white;
+    background: transparent;
     border-radius: 10px;
     transition: transform 0.3s ease;
     width: 270px;
@@ -1173,3 +1174,294 @@ button:hover {
 .icon:hover i {
     color: #14bf98;
 }
+
+/* //about  */
+
+.about-section {
+    height: 70vh;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Vertically center */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between; /* Space between image and content */
+    align-items: center; /* Align items vertically centered */
+    width: 80%; /* Adjust width of the container */
+    margin: auto;
+}
+
+.about-container img {
+    height: 350px;
+    width: 500px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 8px; /* Optional: add some border radius for rounded corners */
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    color: #484a46;
+    width: 50%;
+    gap: 20px;
+    padding: 0 20px; /* Add some padding for spacing */
+
+
+.about-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & > p {
+        color: #14bf98;
+        font-size: 13px;
+    }
+
+    & > h1 {
+        font-size: 28px;
+        line-height: 35px;
+        color: #484a46;
+    }
+}
+}
+
+.about-details p {
+    font-size: 16px;
+    color: #484a46;
+}
+
+ul {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #484a46;
+}
+
+ul > li {
+    list-style: none;
+    color: #484a46;
+}
+
+ul > li::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background-color: #14bf98;
+    margin-right: 10px; /* Adjusted margin-right for desired gap */
+    margin-bottom: 3px;
+}
+
+.review-main {
+    display: flex;
+    gap: 20px;
+}
+
+.number-review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;  /* Small gap between the number and text */
+    color: #484a46;
+}
+
+.number-review #review-count {
+    color: #14bf98;
+    font-size: 50px;  /* Larger font size for the number */
+    font-weight: bold;
+}
+
+.number-review p {
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.2; /* Adjust line height for better readability */
+    width: 50px;
+}
+
+/* //contact */
+.contact-main-section{
+    height: 65vh;
+    background-color: #78797615;
+}
+.contact-section {
+    width: 80%;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Spaces out the contact info and form */
+    gap: 30px; /* Adds gap between the contact info and form */
+    width: 100%;
+}
+
+.contact-info {
+    flex: 1; /* Takes up equal space */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 90px;
+    gap: 5px;
+
+
+& > .contact-heading {
+    & > p:first-child {
+        color: #14bf98;
+        font-size: 16px;
+        text-align: left;
+    }
+    & > h1 {
+        font-size: 26px;
+        text-align: left;
+        margin: 10px 0;
+        color: #484a46;
+    }
+    & > p{
+        color: #484a46;
+        font-size: 16px;
+        width: 500px;
+    
+    }
+}
+}
+
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #14bf98;
+}
+
+.info-item span {
+    font-size: 16px;
+    color: #484a46;
+}
+
+.contact-information{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.media-links-details{
+    & > h2{
+        color: #484a46;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+}
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.social-icons i {
+    background-color: #14bf98;
+    padding: 10px; /* Increase padding for a larger icon */
+    height: 50px; /* Increased height */
+    width: 60px; /* Increased width */
+    color: white;
+    cursor: pointer;
+    border-radius: 8px; /* Optional: Adds slight roundness to the hexagon */
+    display: flex;
+    justify-content: center; /* Centers the icon inside the container */
+    align-items: center; /* Centers the icon inside the container */
+    font-size: 30px; /* Increases the icon size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i:hover {
+    background-color: white;
+    color: #14bf98;
+}
+
+/* Polygon for social media icons */
+.social-icons i {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.contact-form-container {
+    max-width: 600px;
+    margin: 70px auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: none; /* Remove border from input and textarea */
+    background-color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none; /* Removes default focus outline */
+    border: none; /* Ensure no border on focus */
+}
+
+.contact-form textarea {
+    min-height: 150px; /* Adjust height for the message box */
+    resize: vertical; /* Allows resizing vertically */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 8px;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+}
+
+.checkbox-container a {
+    color: #14bf98;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 12px;
+    background-color: #14bf98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #12a57a;
+}
+
+
